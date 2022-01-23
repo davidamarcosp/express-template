@@ -3,6 +3,3 @@ node_modules
 
 # Environmental files
 *.env
-
-# Deployment files
-.deta
