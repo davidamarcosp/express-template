@@ -1,0 +1,44 @@
+{
+  "name": "express-template",
+  "version": "1.0.0",
+  "description": "A boilerplate to create express APIs in both JS and TS",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run format && node ./src/index.js",
+    "start:dev": "npm run format && nodemon",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\" --fix"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidamarcosp/express-template.git"
+  },
+  "keywords": [
+    "ExpressJS",
+    "API",
+    "Typescript",
+    "Javascript"
+  ],
+  "author": "David Marcos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidamarcosp/express-template/issues"
+  },
+  "homepage": "https://github.com/davidamarcosp/express-template#readme",
+  "devDependencies": {
+    "dotenv": "^14.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
+}
