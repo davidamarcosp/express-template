@@ -1,0 +1,19 @@
+name: Deploy to Deta
+on:
+  # Triggers the workflow on push or pull request events but only for the express-with-js-deta branch
+  push:
+    branches: [ express-with-js-deta ]
+  pull_request:
+    branches: [ express-with-js-deta ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: BogDAAAMN/deta-deploy-action@v1.0.1
+        with:
+          deta-access-token: ${{ secrets.DETA_TOKEN }} #Deta access token https://docs.deta.sh/docs/cli/auth
+          deta-name: 'name' #Name of the micro deployed to deta
+          deta-project: 'default' #Name of the deta project, defaults to "default" (optional)
+          deta-project-dir: '.' #Optional: directory to be deployed on Deta. Default is the root "." (optional)

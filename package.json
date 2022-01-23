@@ -4,12 +4,10 @@
   "description": "A boilerplate to create express APIs in both JS and TS",
   "main": "index.js",
   "scripts": {
-    "start": "npm run format && node ./src/index.js",
-    "start:dev": "npm run format && nodemon",
+    "start:dev": "set ENVIRONMENT=development&& npm run format && nodemon",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint \"src/**/*.js\" --fix"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davidamarcosp/express-template.git"

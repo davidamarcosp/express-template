@@ -1,4 +1,4 @@
-export default function logger(req, res, next) {
+function logger(req, res, next) {
   const currentDatetime = new Date();
 
   const formattedDate =
@@ -23,3 +23,5 @@ export default function logger(req, res, next) {
 
   next();
 }
+
+module.exports = logger;

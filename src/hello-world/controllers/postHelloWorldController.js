@@ -1,7 +1,9 @@
-import { helloWorldService } from '../services/helloWorldService.js';
+const helloWorldService = require('../services/helloWorldService.js');
 
-export function postHelloWorldHandler(req, res) {
+function postHelloWorldHandler(req, res) {
   const method = req.method;
   const message = helloWorldService(method);
   res.send(message);
 }
+
+module.exports = postHelloWorldHandler;

@@ -1,9 +1,10 @@
-import express from 'express';
-import { getHelloWorldHandler, postHelloWorldHandler } from '../hello-world/index.js';
+const express = require('express');
+const getHelloWorldHandler = require('../hello-world/controllers/getHelloWorldController.js');
+const postHelloWorldHandler = require('../hello-world/controllers/postHelloWorldController.js');
 
 const router = express.Router();
 
 router.get('/', getHelloWorldHandler);
 router.post('/', postHelloWorldHandler);
 
-export default router;
+module.exports = router;
