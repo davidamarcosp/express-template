@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 
 // Routes
-import helloWorldRoutes from './routes/helloWorldRoutes.js';
+import helloWorldRoutes from './routes/helloWorldRoutes';
 
 // Middlewares
-import logger from './middlewares/logger.js';
+import logger from './middlewares/logger';
 
 const app = express();
 

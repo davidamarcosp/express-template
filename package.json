@@ -4,12 +4,11 @@
   "description": "A boilerplate to create express APIs in both JS and TS",
   "main": "index.js",
   "scripts": {
-    "start": "npm run format && node ./src/index.js",
+    "start": "npm run format && tsc && node ./build/src/index.js",
     "start:dev": "npm run format && nodemon",
-    "format": "prettier --write \"src/**/*.js\"",
-    "lint": "eslint \"src/**/*.js\" --fix"
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davidamarcosp/express-template.git"
@@ -27,6 +26,10 @@
   },
   "homepage": "https://github.com/davidamarcosp/express-template#readme",
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
     "dotenv": "^14.2.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -35,7 +38,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "nodemon": "^2.0.15",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "cors": "^2.8.5",

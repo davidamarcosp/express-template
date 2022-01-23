@@ -1,4 +1,4 @@
-export function helloWorldService(method) {
+export function helloWorldService(method: string): string {
   const messages = {
     GET: 'GET => Hello World!',
     POST: 'POST => Hello World!'

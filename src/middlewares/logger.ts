@@ -1,4 +1,6 @@
-export default function logger(req, res, next) {
+import { Request, Response, NextFunction } from 'express';
+
+export default function logger(req: Request, res: Response, next: NextFunction) {
   const currentDatetime = new Date();
 
   const formattedDate =
